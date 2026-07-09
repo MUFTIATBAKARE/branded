@@ -28,7 +28,7 @@ export function Hero() {
 
         <div className="flex flex-col items-center justify-center gap-6 pt-4 sm:flex-row">
           <Link
-            href="/auth"
+            href="/studio"
             className="shimmer-btn group flex items-center gap-3 rounded-xl px-10 py-4 text-lg font-bold text-white"
           >
             Enter Studio

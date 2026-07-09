@@ -31,7 +31,7 @@ export function Navbar() {
         </div>
 
         <Link
-          href="/auth"
+          href="/studio"
           className="rounded-lg bg-brand-accent px-6 py-2 text-sm font-bold text-brand-on-accent transition-transform duration-200 hover:scale-95"
         >
           Launch Studio
