@@ -4,6 +4,69 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* branded — pixel-perfect ad graphics theme */
+@theme {
+  --color-brand-bg: #1d100b;
+  --color-brand-surface: #18181b;
+  --color-brand-surface-2: #2b1c17;
+  --color-brand-surface-dim: #150b07;
+  --color-brand-border: #5a4138;
+  --color-brand-primary: #ffb599;
+  --color-brand-accent: #f66018;
+  --color-brand-accent-hover: #ff7a35;
+  --color-brand-on-accent: #4f1700;
+  --color-brand-text: #f8ddd4;
+  --color-brand-muted: #e2bfb2;
+  --color-brand-subtle: #a98a7e;
+
+  --font-display: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-accent: var(--font-source-serif), ui-serif, Georgia, serif;
+}
+
+@keyframes brand-shimmer {
+  0% {
+    transform: translateX(-150%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(150%) rotate(45deg);
+  }
+}
+
+.shimmer-btn {
+  background: linear-gradient(45deg, #ea580c, #f59e0b);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.shimmer-btn:hover {
+  box-shadow: 0 0 24px rgba(246, 96, 24, 0.4);
+}
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: brand-shimmer 4s infinite;
+}
+
+.dot-pattern {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
 @theme inline {
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
